@@ -12,11 +12,9 @@ LEFT JOIN solicitudes s ON e.cedula = s.cedula
 LEFT JOIN estados es ON s.id_estado = es.id_estado
 WHERE es.descripcion = 'Aprobada';
 
-select * from vista_control_movimientos_empleado;
-
 -- 2. Muestra todos los empleados y solicitudes
 
-CREATE OR REPLACE vista_empleados_con_solicitudes AS
+CREATE OR REPLACE VIEW vista_empleados_con_solicitudes AS
 SELECT
     e.cedula,
     e.nombre || ' ' || e.apellido1 || ' ' || e.apellido2 AS nombre_completo,
@@ -26,8 +24,6 @@ SELECT
 FROM empleados e
 LEFT JOIN solicitudes s ON e.cedula = s.cedula
 LEFT JOIN estados est ON s.id_estado = est.id_estado;
-
-SELECT * FROM vista_empleados_con_solicitudes;
 
 -- 3. Mostrar todas los detalles solicitudes que han generado los usuarios.
 
@@ -42,9 +38,7 @@ LEFT JOIN inventario i ON d.id_inventario = i.id_inventario
 LEFT JOIN materiales m ON i.codigo_material = m.codigo_material
 LEFT JOIN racks r ON i.id_rack = r.id_rack;
 
-select * from vista_detalle_solicitudes;
-
--- 4. Solicitudes de proyectos pendientes de aprobación para el rol de proveeduría.
+-- 4. Solicitudes de proyectos pendientes de aprobaciÃ³n para el rol de proveedurÃ­a.
 
 CREATE OR REPLACE VIEW vista_solicitudes_pendientes_empleado AS
 SELECT
@@ -62,8 +56,6 @@ WHERE s.id_estado = (
     WHERE descripcion = 'En espera'
 );
 
-select * from vista_solicitudes_pendientes_empleado;
-
 -- 5. Administrar accesos de los empleados - Administrador
 
 CREATE OR REPLACE VIEW vista_empleados_usuarios AS
@@ -72,10 +64,8 @@ SELECT
     e.nombre || ' ' || e.apellido1 || ' ' || e.apellido2 AS nombre_usuario,
     u.id_usuario,
     u.nombre AS nombre_usuario_rol,
-    u.contraseña,
+    u.contraseÃ±a,
     r.rol AS rol_usuario
 FROM empleados e
 LEFT JOIN usuarios u ON e.id_usuario = u.id_usuario
 LEFT JOIN roles_empresa r ON u.id_rol = r.id_rol;
-
-SELECT * FROM vista_empleados_usuarios;
