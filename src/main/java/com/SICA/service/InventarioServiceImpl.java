@@ -21,24 +21,22 @@ public class InventarioServiceImpl implements InventarioService {
         var lista = (List<Inventario>)inventarioDao.findAll();
         return lista;
     }
+    
+    
+    
+    @Override
+    public Inventario getInventario(Inventario inventario) {
+        return inventarioDao.findById(inventario.getIdInventario()).orElse(null);
+    }
 
     @Override
     public void save(Inventario inventario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        inventarioDao.save(inventario);
     }
 
     @Override
     public void delete(Inventario inventario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        inventarioDao.deleteById(inventario.getIdInventario());
     }
-
-    @Override
-    public Inventario getInventario(Inventario inventario) {
-         return inventarioDao.findById(inventario.getIdInventario()).orElse(null);
-    }
-    
-    
-    
-
     
 }
