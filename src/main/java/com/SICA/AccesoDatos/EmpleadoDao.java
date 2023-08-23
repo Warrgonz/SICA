@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.SICA.AccesoDatos;
 
-/**
- *
- * @author acast
- */
-public class EmpleadoDao {
+import com.SICA.domain.Empleado;
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface EmpleadoDao extends CrudRepository<Empleado, Long>{
     
 }
