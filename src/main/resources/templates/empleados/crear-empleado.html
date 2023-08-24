@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Empleado</title>
+</head>
+
+<body>
+    <h2>Crear Nuevo Empleado</h2>
+
+    <form th:action="@{/crear-empleado}" method="post">
+    <label>Cédula: </label><input type="text" name="cedula"><br>
+    <label>Nombre: </label><input type="text" name="nombre"><br>
+    <label>Apellido 1: </label><input type="text" name="apellido1"><br>
+    <label>Apellido 2: </label><input type="text" name="apellido2"><br>
+    <label>ID Usuario: </label><input type="text" name="idUsuario"><br>
+    <input type="submit" value="Crear Empleado">
+    </form>
+
+    <!-- ... Your other content ... -->
+</body>
+
+</html>

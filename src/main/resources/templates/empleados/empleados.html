@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns-="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Empleado List</title>
+
+    <!-- ... Your other head elements ... -->
+</head>
+
+<body>
+    <!-- ... Your header and sidebar ... -->
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+            <div class="card-box pd-20 height-100-p mb-30">
+                <div class="row align-items-center d-flex text-center">
+                    <div class="col-md-12 ">
+                        <h4 class="font-20 weight-500 mb-10 text-capitalize">
+                            <span class="weight-600 font-30 text-blue">Empleados</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box my-4">
+                <div class="table-responsive p-4">
+                    <h4 class="py-4">Lista de Empleados</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido 1</th>
+                                <th scope="col">Apellido 2</th>
+                                <th scope="col">ID Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="empleado : ${empleados}">
+                                <td th:text="${empleado.cedula}"></td>
+                                <td th:text="${empleado.nombre}"></td>
+                                <td th:text="${empleado.apellido1}"></td>
+                                <td th:text="${empleado.apellido2}"></td>
+                                <td th:text="${empleado.idUsuario}"></td>
+                                <td>
+            <a th:href="@{/eliminar-empleado/{cedula}(cedula=${empleado.cedula})}" class="btn btn-danger">Eliminar</a>
+        </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <a th:href="@{/crear-empleado}" class="btn btn-primary">Crear Nuevo Empleado</a>
+            <!-- ... Your footer ... -->
+        </div>
+    </div>
+    <!-- ... Your JavaScript includes ... -->
+</body>
+
+</html>

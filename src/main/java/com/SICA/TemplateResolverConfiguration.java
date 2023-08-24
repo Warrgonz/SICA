@@ -23,7 +23,7 @@ public class TemplateResolverConfiguration {
     @Bean
     public SpringResourceTemplateResolver TemplateResolver_1() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("templates/empleados/");
+        templateResolver.setPrefix("templates/empleados");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");

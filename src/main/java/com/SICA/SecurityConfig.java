@@ -46,42 +46,25 @@ public class SecurityConfig {
 //    }
     
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http)
-            throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeHttpRequests((requests) -> requests
-                .requestMatchers(
-                        "/",
-                        "/index",
-                        "/errores/**",
-                        "/error",
-                        "/webjars/**").permitAll()
-                .requestMatchers(
-                        "/articulo/nuevo",
-                        "/articulo/guardar",
-                        "/articulo/modificar/**",
-                        "/articulo/eliminar/**",
-                        "/categoria/nuevo",
-                        "/categoria/guardar",
-                        "/categoria/modificar/**",
-                        "/categoria/eliminar/**",
-                        "/cliente/nuevo",
-                        "/cliente/guardar",
-                        "/cliente/modificar/**",
-                        "/cliente/eliminar/**")
-                .hasRole("ADMIN")
-                .requestMatchers(
-                        "/articulo/listado",
-                        "/categoria/listado",
-                        "/cliente/listado")
-                .hasAnyRole("ADMIN", "VENDEDOR")
-                )
-                .formLogin((form) -> form
-                .loginPage("/login")
-                .permitAll())
-                .logout((logout) -> logout.permitAll())
-                .exceptionHandling()
-                .accessDeniedPage("/errores/403");
+            .authorizeRequests(authorizeRequests ->
+                authorizeRequests
+                    .anyRequest().permitAll() // Allow access to any URL without authentication
+            )
+            .formLogin(formLogin ->
+                formLogin
+                    .loginPage("/login")
+                    .permitAll()
+            )
+            .logout(logout ->
+                logout
+                    .permitAll()
+            )
+            .exceptionHandling(exceptionHandling ->
+                exceptionHandling
+                    .accessDeniedPage("/errores/403")
+            );
         return http.build();
     }
 }

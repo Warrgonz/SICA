@@ -30,8 +30,9 @@ public class Usuario implements Serializable{
     @NotEmpty
     private String password;
     
-    @OneToMany
-    @JoinColumn(name="ID_USUARIO")
-    private List<Rol> roles;
+    @NotEmpty
+    private int idRol;
+    
+    
     
 }

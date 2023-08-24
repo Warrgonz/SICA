@@ -1,6 +1,7 @@
 
 package com.SICA.domain;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +13,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="empleados")
-public class Empleado {
+public class Empleado implements Serializable{
     private static final Long serialVersionUID = 1L;
     
     @Id

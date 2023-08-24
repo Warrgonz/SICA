@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns-="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Miller Constructora</title>
+
+    <!-- ... Your other head elements ... -->
+</head>
+
+<body>
+    <!-- ... Your header and sidebar ... -->
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+            <div class="card-box pd-20 height-100-p mb-30">
+                <div class="row align-items-center d-flex text-center">
+                    <div class="col-md-12 ">
+                        <h4 class="font-20 weight-500 mb-10 text-capitalize">
+                            <span class="weight-600 font-30 text-blue">Usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box my-4">
+                <div class="table-responsive p-4">
+                    <h4 class="py-4">Usuarios activos</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID Usuario</th>
+                                <th scope="col">Nombre Completo</th>
+                                <th scope="col">Roles</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="usuario : ${usuarios}">
+                                <td th:text="${usuario.idUsuario}"></td>
+                                <td th:text="${usuario.username}"></td>
+                                <td>
+                                    <ul>
+                                        <li th:each="rol : ${usuario.roles}" th:text="${rol.rol}"></li>
+                                    </ul>
+                                </td>
+                                <td th:text="${usuario.username}"></td>
+                                <td th:text="${usuario.password}"></td>
+                                <td>
+                                    <a href="#"><button class="btn btn-sm text-white">Modificar</button></a>
+                                    <a href="#"><button class="btn btn-delete btn-sm text-white">Eliminar</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- ... Your footer ... -->
+        </div>
+    </div>
+    <!-- ... Your JavaScript includes ... -->
+</body>
+
+</html>

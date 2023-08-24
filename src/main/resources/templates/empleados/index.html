@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns-="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Empleados Index</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="pd-ltr-20">
+            <div class="card-box pd-20 height-100-p mb-30">
+                <div class="row align-items-center d-flex text-center">
+                    <div class="col-md-12 ">
+                        <h4 class="font-20 weight-500 mb-10 text-capitalize">
+                            <span class="weight-600 font-30 text-blue">Empleados Index</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box my-4">
+                <div class="table-responsive p-4">
+                    <h4 class="py-4">Empleados Management</h4>
+                    <a th:href="@{/empleados}" class="btn btn-primary">Ver Empleados</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
