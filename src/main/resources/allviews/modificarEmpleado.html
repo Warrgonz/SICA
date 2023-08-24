@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>Miller Constructora</title>
+
+	<!-- Site favicon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon.png">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<link rel="stylesheet" href="vendors/styles/miller.css">
+
+</head>
+
+<body>
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+			<div class="search-toggle-icon dw dw-search2"></div>
+		</div>
+		<div>
+			<div>
+				<div>
+					<div class="p-4">
+						<a href="#" role="button">
+							<span class="user-name h5 py-3">Salir</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<nav class="left-side-bar">
+		<div class="brand-logo">
+			<a href="index.html">
+				<img src="vendors/images/logo.png" class="m-4 p-2" alt="Miller logo">
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<li>
+					<a href="index.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-home"></span>
+						<span class="mtext">Inicio</span>
+					</a>
+				</li>
+				<li>
+					<a href="empleado.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-user1"></span>
+						<span class="mtext">Empleados</span>
+					</a>
+				</li>
+				<li>
+					<a href="inventario.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-library"></span>
+						<span class="mtext">Inventario</span>
+					</a>
+				</li>
+				<li>
+					<a href="solicitudes.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-edit2"></span><span class="mtext">Solicitudes</span>
+					</a>
+				</li>
+				<li>
+					<a href="racks.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-server"></span>
+						<span class="mtext">Racks</span>
+					</a>
+				</li>
+				<li>
+					<a href="actividad.html" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-double-arrow-1"></span>
+						<span class="mtext">Actividad</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center d-flex text-center">
+
+					<div class="col-md-12 ">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							<span class="weight-600 font-30 text-blue">Registro Empleados</span>
+						</h4>
+					</div>
+				</div>
+			</div>
+			<form>
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">ID</label>
+					<input type="text" class="form-control" disabled required placeholder="1" id="exampleInputEmail1">
+				  </div>
+				<div class="mb-3">
+				  <label for="exampleInputEmail1" class="form-label">Cedula</label>
+				  <input type="text" class="form-control" disabled required placeholder="118290631" id="exampleInputEmail1">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleInputPassword1" class="form-label">Nombre</label>
+				  <input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el nombre completo">
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Apellido paterno</label>
+					<input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el apellido paterno">
+				  </div>
+				  <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Apellido materno</label>
+					<input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el apellido materno">
+				  </div>
+				  <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">ID Usuario</label>
+					<input type="number" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el numero de usuario">
+				  </div>
+
+				  <button type="submit" class="btn btn-primary my-3">Enviar</button>
+			  </form>
+
+			<div class="footer-wrap pd-20 mb-20 card-box mt-3">
+				Universidad Fidélitas <a href="https://github.com/Warrgonz/SICA" target="_blank">Lenguajes de bases de
+					datos</a>
+			</div>
+		</div>
+	</div>
+	<!-- js -->
+	<script src="https://kit.fontawesome.com/4ccaae5e72.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
