@@ -29,7 +29,6 @@
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2"></div>
 		</div>
 		<div>
 			<div>
@@ -60,12 +59,6 @@
 					<a target="_blank" class="dropdown-toggle no-arrow">
 						<span class="micon dw dw-home"></span>
 						<span class="mtext">Inicio</span>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" class="dropdown-toggle no-arrow">
-						<span class="micon dw dw-user1"></span>
-						<span class="mtext">Usuarios</span>
 					</a>
 				</li>
 				<li>
@@ -117,31 +110,42 @@
 
 					<div class="col-md-12 ">
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							<span class="weight-600 font-30 text-blue">Modificar Inventario</span>
+							<span class="weight-600 font-30 text-blue">Detalles de solicitud</span>
 						</h4>
 					</div>
 				</div>
 			</div>
-			<form>
-				<div class="mb-3">
-				  <label for="exampleInputPassword1" class="form-label">Codigo del material</label>
-				  <input type="number" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el codigo del material">
-				</div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Material</label>
-					<input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el material">
-				  </div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Rack</label>
-					<input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese el rack">
-				  </div>
-				  <div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Cantidad existente</label>
-					<input type="number" class="form-control" required id="exampleInputPassword1" placeholder="Ingrese la cantidad">
-				  </div>
+			<div class="card-box">
+				<div class="table-responsive p-4">
+					<h3 class="p-4">Solicitud # 1</h3>
+					<table class="table ">
+						<thead>
+							<tr>
+								<th scope="col"># Solicitud</th>
+								<th scope="col">Material</th>
+								<th scope="col">Fecha</th>
+								<th scope="col">Rack</th>
+								<th scope="col">Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Monos</td>
+								<td>23/08/2023</td>
+								<td>R1E3R3</td>
+								<td>
+									<button class="btn  btn-sm btn-delete text-white">Rechazar</button>
+									<button class="btn  btn-sm disabled btn-success text-white">Aceptar</button>
+									<button class="btn  btn-sm text-white">Pendiente</button>
+								</td>
+							</tr>
 
-				  <button type="submit" class="btn btn-primary my-3">Enviar</button>
-			  </form>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
 
 			<div class="footer-wrap pd-20 mb-20 card-box mt-3">
 				Universidad Fidélitas <a href="https://github.com/Warrgonz/SICA" target="_blank">Lenguajes de bases de

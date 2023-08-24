@@ -7642,18 +7642,6 @@
 .fi-zoom-out:before {
   content: "\f21a"; }
 
-@charset "UTF-8";
-/*!
-  Ionicons, v2.0.1
-  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
-  https://twitter.com/benjsperry  https://twitter.com/ionicframework
-  MIT License: https://github.com/driftyco/ionicons
-
-  Android-style icons originally built by Google’s
-  Material Design Icons: https://github.com/google/material-design-icons
-  used under CC BY http://creativecommons.org/licenses/by/4.0/
-  Modified icons to fit ionicon’s grid from original.
-*/
 @font-face {
   font-family: "Ionicons";
   src: url("../fonts/ionicons.eot?v=2.0.1");
@@ -7669,7 +7657,7 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  text-rendering: auto;
+ /* text-rendering: auto;*/
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
